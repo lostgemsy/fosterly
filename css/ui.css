@@ -820,3 +820,120 @@ body.rail-open .ol-sidebar { width: 64px !important; }
   .ol-sidebar { animation: none; }
   .ol-sidebar .ol-link, .ol-sidebar .ol-panic, .ol-btn { transition: none; }
 }
+
+/* HOHO GAMES: one connected, top-centred navigation bar.
+   Override the old right-side icon rail completely so every destination stays visible. */
+.ol-sidebar {
+  position: fixed !important;
+  inset: 14px auto auto 50% !important;
+  left: 50% !important; right: auto !important; top: 14px !important; bottom: auto !important;
+  z-index: 1000 !important;
+  transform: translateX(-50%) !important;
+  display: flex !important; flex-direction: row !important; align-items: center !important;
+  justify-content: flex-start !important;
+  width: max-content !important; max-width: calc(100vw - 28px) !important;
+  height: auto !important; max-height: none !important; min-height: 0 !important;
+  gap: 4px !important; padding: 7px !important;
+  overflow-x: auto !important; overflow-y: visible !important;
+  scrollbar-width: none !important;
+  border: 1px solid rgba(231,237,247,.2) !important;
+  border-radius: 19px !important;
+  background: linear-gradient(180deg,rgba(38,42,50,.94),rgba(13,15,20,.94)) !important;
+  box-shadow: 0 12px 38px rgba(0,0,0,.36),inset 0 1px rgba(255,255,255,.12) !important;
+  backdrop-filter: blur(24px) saturate(.75) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(.75) !important;
+  animation: hoho-topbar-in .38s ease-out both !important;
+}
+.ol-sidebar::-webkit-scrollbar { display:none !important; }
+.ol-sidebar .ol-brand {
+  display:flex !important; flex:0 0 auto !important; flex-direction:row !important;
+  align-items:center !important; justify-content:center !important; gap:0 !important;
+  width:auto !important; min-width:max-content !important; min-height:40px !important;
+  margin:0 5px 0 0 !important; padding:0 13px 0 9px !important;
+  border:0 !important; border-right:1px solid rgba(231,237,247,.15) !important;
+  border-radius:0 !important; overflow:visible !important;
+}
+.ol-sidebar .ol-brand-logo { display:none !important; }
+.ol-sidebar .ol-brand-name {
+  display:block !important; opacity:1 !important; max-width:none !important;
+  overflow:visible !important; color:#f5f7fb !important;
+  font-size:13px !important; font-weight:850 !important; letter-spacing:.055em !important;
+  white-space:nowrap !important; line-height:1 !important;
+}
+.ol-sidebar .ol-group {
+  display:flex !important; flex:0 0 auto !important; flex-direction:row !important;
+  align-items:center !important; justify-content:center !important; gap:3px !important;
+  width:auto !important; min-width:0 !important; min-height:0 !important;
+  padding:0 !important; margin:0 !important; overflow:visible !important;
+  border:0 !important; border-radius:0 !important; background:transparent !important;
+  box-shadow:none !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important;
+}
+.ol-sidebar .ol-rail {
+  display:flex !important; flex:0 0 auto !important; flex-direction:row !important;
+  align-items:center !important; gap:3px !important; width:auto !important;
+  min-width:0 !important; min-height:0 !important; overflow:visible !important;
+}
+.ol-sidebar .ol-spacer { display:none !important; flex:none !important; min-height:0 !important; }
+.ol-sidebar .ol-toggle { display:none !important; }
+.ol-sidebar .ol-label {
+  display:inline !important; flex:0 0 auto !important; opacity:1 !important;
+  max-width:160px !important; width:auto !important; overflow:visible !important;
+  color:inherit !important; font-size:12px !important; font-weight:650 !important;
+  white-space:nowrap !important;
+}
+.ol-sidebar .ol-link, .ol-sidebar .ol-panic {
+  position:relative !important; display:inline-flex !important; flex:0 0 auto !important;
+  flex-direction:row !important; align-items:center !important; justify-content:center !important;
+  gap:8px !important; width:auto !important; min-width:max-content !important;
+  height:40px !important; min-height:40px !important; max-height:40px !important;
+  padding:0 12px !important; margin:0 !important;
+  border:1px solid transparent !important; border-radius:12px !important;
+  color:#c4cbd6 !important; background:transparent !important;
+  font-size:12px !important; line-height:1 !important; white-space:nowrap !important;
+  overflow:visible !important; transform:none !important; box-shadow:none !important;
+}
+.ol-sidebar .ol-link svg, .ol-sidebar .ol-panic svg {
+  display:block !important; flex:0 0 17px !important; width:17px !important; height:17px !important;
+}
+.ol-sidebar .ol-link:hover, .ol-sidebar .ol-panic:hover {
+  color:#fff !important; background:rgba(239,243,250,.09) !important;
+  border-color:rgba(230,236,246,.1) !important;
+}
+.ol-sidebar .ol-link.active {
+  color:#171a20 !important; font-weight:750 !important;
+  background:linear-gradient(135deg,#fff,#c5ccd7) !important;
+  border-color:rgba(255,255,255,.55) !important;
+  box-shadow:0 3px 12px rgba(220,228,240,.12) !important;
+}
+.ol-sidebar .ol-link::after { content:none !important; display:none !important; }
+.ol-sidebar .ol-legal { display:none !important; }
+.ol-stage, body.rail-open .ol-stage {
+  margin-left:0 !important; margin-right:0 !important;
+  padding-top:88px !important;
+}
+@keyframes hoho-topbar-in {
+  from { opacity:0; transform:translate(-50%,-8px); }
+  to { opacity:1; transform:translate(-50%,0); }
+}
+@media (max-width:700px) {
+  .ol-sidebar {
+    top:8px !important; max-width:calc(100vw - 16px) !important;
+    padding:5px !important; gap:2px !important; border-radius:15px !important;
+  }
+  .ol-sidebar .ol-brand { min-height:36px !important; padding:0 8px 0 5px !important; margin-right:2px !important; }
+  .ol-sidebar .ol-brand-name { font-size:11px !important; letter-spacing:.025em !important; }
+  .ol-sidebar .ol-group, .ol-sidebar .ol-rail { gap:1px !important; }
+  .ol-sidebar .ol-link, .ol-sidebar .ol-panic {
+    height:36px !important; min-height:36px !important; max-height:36px !important;
+    padding:0 9px !important; gap:6px !important; border-radius:10px !important;
+  }
+  .ol-sidebar .ol-label { font-size:11px !important; }
+  .ol-sidebar .ol-link svg, .ol-sidebar .ol-panic svg { width:15px !important; height:15px !important; flex-basis:15px !important; }
+  .ol-stage, body.rail-open .ol-stage { padding-top:70px !important; }
+}
+@media (max-width:420px) {
+  .ol-sidebar .ol-brand { display:none !important; }
+  .ol-sidebar .ol-link, .ol-sidebar .ol-panic { padding:0 10px !important; }
+  .ol-sidebar .ol-label { font-size:10.5px !important; }
+}
+@media (prefers-reduced-motion:reduce) { .ol-sidebar { animation:none !important; } }
