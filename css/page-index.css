@@ -1,0 +1,35 @@
+/* Full-viewport home iframe. The previous page-index.css reference was missing,
+   which left #homeFrame at the browser's default 300x150 size. */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+#homeFrame {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #000;
+}
+
+#homeFrame:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+}
