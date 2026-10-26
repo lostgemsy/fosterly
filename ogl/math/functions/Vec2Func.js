@@ -8,9 +8,9 @@ const EPSILON = 0.000001;
  * @returns {vec2} out
  */
 export function copy(out, a) {
-  out[0] = a[0];
-  out[1] = a[1];
-  return out;
+    out[0] = a[0];
+    out[1] = a[1];
+    return out;
 }
 
 /**
@@ -22,9 +22,9 @@ export function copy(out, a) {
  * @returns {vec2} out
  */
 export function set(out, x, y) {
-  out[0] = x;
-  out[1] = y;
-  return out;
+    out[0] = x;
+    out[1] = y;
+    return out;
 }
 
 /**
@@ -36,9 +36,9 @@ export function set(out, x, y) {
  * @returns {vec2} out
  */
 export function add(out, a, b) {
-  out[0] = a[0] + b[0];
-  out[1] = a[1] + b[1];
-  return out;
+    out[0] = a[0] + b[0];
+    out[1] = a[1] + b[1];
+    return out;
 }
 
 /**
@@ -50,9 +50,9 @@ export function add(out, a, b) {
  * @returns {vec2} out
  */
 export function subtract(out, a, b) {
-  out[0] = a[0] - b[0];
-  out[1] = a[1] - b[1];
-  return out;
+    out[0] = a[0] - b[0];
+    out[1] = a[1] - b[1];
+    return out;
 }
 
 /**
@@ -64,9 +64,9 @@ export function subtract(out, a, b) {
  * @returns {vec2} out
  */
 export function multiply(out, a, b) {
-  out[0] = a[0] * b[0];
-  out[1] = a[1] * b[1];
-  return out;
+    out[0] = a[0] * b[0];
+    out[1] = a[1] * b[1];
+    return out;
 }
 
 /**
@@ -78,9 +78,9 @@ export function multiply(out, a, b) {
  * @returns {vec2} out
  */
 export function divide(out, a, b) {
-  out[0] = a[0] / b[0];
-  out[1] = a[1] / b[1];
-  return out;
+    out[0] = a[0] / b[0];
+    out[1] = a[1] / b[1];
+    return out;
 }
 
 /**
@@ -92,9 +92,9 @@ export function divide(out, a, b) {
  * @returns {vec2} out
  */
 export function scale(out, a, b) {
-  out[0] = a[0] * b;
-  out[1] = a[1] * b;
-  return out;
+    out[0] = a[0] * b;
+    out[1] = a[1] * b;
+    return out;
 }
 
 /**
@@ -105,9 +105,9 @@ export function scale(out, a, b) {
  * @returns {Number} distance between a and b
  */
 export function distance(a, b) {
-  var x = b[0] - a[0],
-    y = b[1] - a[1];
-  return Math.sqrt(x * x + y * y);
+    var x = b[0] - a[0],
+        y = b[1] - a[1];
+    return Math.sqrt(x * x + y * y);
 }
 
 /**
@@ -118,9 +118,9 @@ export function distance(a, b) {
  * @returns {Number} squared distance between a and b
  */
 export function squaredDistance(a, b) {
-  var x = b[0] - a[0],
-    y = b[1] - a[1];
-  return x * x + y * y;
+    var x = b[0] - a[0],
+        y = b[1] - a[1];
+    return x * x + y * y;
 }
 
 /**
@@ -130,9 +130,9 @@ export function squaredDistance(a, b) {
  * @returns {Number} length of a
  */
 export function length(a) {
-  var x = a[0],
-    y = a[1];
-  return Math.sqrt(x * x + y * y);
+    var x = a[0],
+        y = a[1];
+    return Math.sqrt(x * x + y * y);
 }
 
 /**
@@ -142,9 +142,9 @@ export function length(a) {
  * @returns {Number} squared length of a
  */
 export function squaredLength(a) {
-  var x = a[0],
-    y = a[1];
-  return x * x + y * y;
+    var x = a[0],
+        y = a[1];
+    return x * x + y * y;
 }
 
 /**
@@ -155,9 +155,9 @@ export function squaredLength(a) {
  * @returns {vec2} out
  */
 export function negate(out, a) {
-  out[0] = -a[0];
-  out[1] = -a[1];
-  return out;
+    out[0] = -a[0];
+    out[1] = -a[1];
+    return out;
 }
 
 /**
@@ -168,9 +168,9 @@ export function negate(out, a) {
  * @returns {vec2} out
  */
 export function inverse(out, a) {
-  out[0] = 1.0 / a[0];
-  out[1] = 1.0 / a[1];
-  return out;
+    out[0] = 1.0 / a[0];
+    out[1] = 1.0 / a[1];
+    return out;
 }
 
 /**
@@ -181,16 +181,16 @@ export function inverse(out, a) {
  * @returns {vec2} out
  */
 export function normalize(out, a) {
-  var x = a[0],
-    y = a[1];
-  var len = x * x + y * y;
-  if (len > 0) {
-    //TODO: evaluate use of glm_invsqrt here?
-    len = 1 / Math.sqrt(len);
-  }
-  out[0] = a[0] * len;
-  out[1] = a[1] * len;
-  return out;
+    var x = a[0],
+        y = a[1];
+    var len = x * x + y * y;
+    if (len > 0) {
+        //TODO: evaluate use of glm_invsqrt here?
+        len = 1 / Math.sqrt(len);
+    }
+    out[0] = a[0] * len;
+    out[1] = a[1] * len;
+    return out;
 }
 
 /**
@@ -201,7 +201,7 @@ export function normalize(out, a) {
  * @returns {Number} dot product of a and b
  */
 export function dot(a, b) {
-  return a[0] * b[0] + a[1] * b[1];
+    return a[0] * b[0] + a[1] * b[1];
 }
 
 /**
@@ -213,7 +213,7 @@ export function dot(a, b) {
  * @returns {Number} cross product of a and b
  */
 export function cross(a, b) {
-  return a[0] * b[1] - a[1] * b[0];
+    return a[0] * b[1] - a[1] * b[0];
 }
 
 /**
@@ -226,11 +226,11 @@ export function cross(a, b) {
  * @returns {vec2} out
  */
 export function lerp(out, a, b, t) {
-  var ax = a[0],
-    ay = a[1];
-  out[0] = ax + t * (b[0] - ax);
-  out[1] = ay + t * (b[1] - ay);
-  return out;
+    var ax = a[0],
+        ay = a[1];
+    out[0] = ax + t * (b[0] - ax);
+    out[1] = ay + t * (b[1] - ay);
+    return out;
 }
 
 /**
@@ -244,13 +244,13 @@ export function lerp(out, a, b, t) {
  * @returns {vec2} out
  */
 export function smoothLerp(out, a, b, decay, dt) {
-  const exp = Math.exp(-decay * dt);
-  let ax = a[0];
-  let ay = a[1];
+    const exp = Math.exp(-decay * dt);
+    let ax = a[0];
+    let ay = a[1];
 
-  out[0] = b[0] + (ax - b[0]) * exp;
-  out[1] = b[1] + (ay - b[1]) * exp;
-  return out;
+    out[0] = b[0] + (ax - b[0]) * exp;
+    out[1] = b[1] + (ay - b[1]) * exp;
+    return out;
 }
 
 /**
@@ -262,11 +262,11 @@ export function smoothLerp(out, a, b, decay, dt) {
  * @returns {vec2} out
  */
 export function transformMat2(out, a, m) {
-  var x = a[0],
-    y = a[1];
-  out[0] = m[0] * x + m[2] * y;
-  out[1] = m[1] * x + m[3] * y;
-  return out;
+    var x = a[0],
+        y = a[1];
+    out[0] = m[0] * x + m[2] * y;
+    out[1] = m[1] * x + m[3] * y;
+    return out;
 }
 
 /**
@@ -278,11 +278,11 @@ export function transformMat2(out, a, m) {
  * @returns {vec2} out
  */
 export function transformMat2d(out, a, m) {
-  var x = a[0],
-    y = a[1];
-  out[0] = m[0] * x + m[2] * y + m[4];
-  out[1] = m[1] * x + m[3] * y + m[5];
-  return out;
+    var x = a[0],
+        y = a[1];
+    out[0] = m[0] * x + m[2] * y + m[4];
+    out[1] = m[1] * x + m[3] * y + m[5];
+    return out;
 }
 
 /**
@@ -295,11 +295,11 @@ export function transformMat2d(out, a, m) {
  * @returns {vec2} out
  */
 export function transformMat3(out, a, m) {
-  var x = a[0],
-    y = a[1];
-  out[0] = m[0] * x + m[3] * y + m[6];
-  out[1] = m[1] * x + m[4] * y + m[7];
-  return out;
+    var x = a[0],
+        y = a[1];
+    out[0] = m[0] * x + m[3] * y + m[6];
+    out[1] = m[1] * x + m[4] * y + m[7];
+    return out;
 }
 
 /**
@@ -313,11 +313,11 @@ export function transformMat3(out, a, m) {
  * @returns {vec2} out
  */
 export function transformMat4(out, a, m) {
-  let x = a[0];
-  let y = a[1];
-  out[0] = m[0] * x + m[4] * y + m[12];
-  out[1] = m[1] * x + m[5] * y + m[13];
-  return out;
+    let x = a[0];
+    let y = a[1];
+    out[0] = m[0] * x + m[4] * y + m[12];
+    out[1] = m[1] * x + m[5] * y + m[13];
+    return out;
 }
 
 /**
@@ -328,5 +328,5 @@ export function transformMat4(out, a, m) {
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 export function exactEquals(a, b) {
-  return a[0] === b[0] && a[1] === b[1];
+    return a[0] === b[0] && a[1] === b[1];
 }

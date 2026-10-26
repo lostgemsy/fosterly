@@ -1,6 +1,4 @@
-import {
-  Program
-} from '../core/Program.js';
+import { Program } from '../core/Program.js';
 
 const vertex = /* glsl */ `
     precision highp float;
@@ -34,9 +32,9 @@ const fragment = /* glsl */ `
 `;
 
 export function NormalProgram(gl) {
-  return new Program(gl, {
-    vertex: vertex,
-    fragment: fragment,
-    cullFace: false,
-  });
+    return new Program(gl, {
+        vertex: vertex,
+        fragment: fragment,
+        cullFace: false,
+    });
 }

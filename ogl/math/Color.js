@@ -11,44 +11,44 @@ import * as ColorFunc from './functions/ColorFunc.js';
 // new Color('red') - Color name string (short list in ColorFunc.js)
 
 export class Color extends Array {
-  constructor(color) {
-    if (Array.isArray(color)) return super(...color);
-    return super(...ColorFunc.parseColor(...arguments));
-  }
+    constructor(color) {
+        if (Array.isArray(color)) return super(...color);
+        return super(...ColorFunc.parseColor(...arguments));
+    }
 
-  get r() {
-    return this[0];
-  }
+    get r() {
+        return this[0];
+    }
 
-  get g() {
-    return this[1];
-  }
+    get g() {
+        return this[1];
+    }
 
-  get b() {
-    return this[2];
-  }
+    get b() {
+        return this[2];
+    }
 
-  set r(v) {
-    this[0] = v;
-  }
+    set r(v) {
+        this[0] = v;
+    }
 
-  set g(v) {
-    this[1] = v;
-  }
+    set g(v) {
+        this[1] = v;
+    }
 
-  set b(v) {
-    this[2] = v;
-  }
+    set b(v) {
+        this[2] = v;
+    }
 
-  set(color) {
-    if (Array.isArray(color)) return this.copy(color);
-    return this.copy(ColorFunc.parseColor(...arguments));
-  }
+    set(color) {
+        if (Array.isArray(color)) return this.copy(color);
+        return this.copy(ColorFunc.parseColor(...arguments));
+    }
 
-  copy(v) {
-    this[0] = v[0];
-    this[1] = v[1];
-    this[2] = v[2];
-    return this;
-  }
+    copy(v) {
+        this[0] = v[0];
+        this[1] = v[1];
+        this[2] = v[2];
+        return this;
+    }
 }
