@@ -112,3 +112,16 @@ body { position:fixed; inset:0; overflow:hidden; overscroll-behavior:none; }
   .hero-brand { gap:14px !important; }
   .hero-cat { width:70px !important; height:70px !important; border-radius:22px !important; }
 }
+
+/* Browser home: subtle responsive lift and focus glow */
+.search-bar {
+  transition:transform .24s cubic-bezier(.2,.8,.2,1),border-color .2s ease,box-shadow .2s ease,background .2s ease!important;
+}
+.search-bar:hover {
+  transform:translateY(-2px);
+  background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));
+  box-shadow:0 24px 62px rgba(0,0,0,.26),inset 0 1px rgba(255,255,255,.12);
+}
+.search-bar:focus-within { transform:translateY(-2px); }
+@media(max-width:700px){.search-bar:hover,.search-bar:focus-within{transform:none}}
+@media(prefers-reduced-motion:reduce){.search-bar{transition:none!important}.search-bar:hover,.search-bar:focus-within{transform:none}}
