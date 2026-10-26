@@ -779,3 +779,33 @@ body.bar-hidden .proxy-reveal { display: grid; }
 @media (prefers-reduced-motion: reduce) {
   .loading-overlay, .load-spinner { animation: none; }
 }
+
+
+/* Silver proxy chrome: compact controls, clear hierarchy, polished tabs. */
+.proxy-bar {
+  background: linear-gradient(135deg,rgba(43,47,56,.94),rgba(17,19,24,.94));
+  border-color: rgba(229,235,244,.2);
+  box-shadow: 0 15px 48px rgba(0,0,0,.38), inset 0 1px rgba(255,255,255,.1);
+}
+.proxy-tabs {
+  background: linear-gradient(180deg,rgba(42,46,54,.92),rgba(19,21,27,.88));
+  border-color: rgba(229,235,244,.16);
+}
+.tab { border-radius: 12px 12px 0 0; }
+.tab.is-active { background: linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,.04)); box-shadow: inset 0 2px 0 #e4e9f1; }
+.proxy-btn { border-radius: 11px; }
+.proxy-btn:hover { background: rgba(239,243,249,.13); }
+.proxy-iframe { background: #0b0d12; }
+.loading-overlay, .empty-state {
+  background:
+    radial-gradient(ellipse at 50% 38%,rgba(207,216,229,.14),transparent 38%),
+    linear-gradient(145deg,#0a0c10,#1b1f27 48%,#090b0f);
+}
+.loading-overlay::after, .empty-state::after {
+  display:block;
+  background: radial-gradient(ellipse at center,transparent 20%,rgba(0,0,0,.24) 100%);
+}
+.hex-track { stroke: rgba(230,236,246,.2); }
+.hex-run { stroke: #e1e6ee; filter: drop-shadow(0 0 8px rgba(222,230,241,.25)); }
+.hex-loader .hex-core { fill: rgba(224,231,241,.1); stroke: rgba(224,231,241,.35); }
+.fav-tile { border-radius: 16px; background: linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025)); }
