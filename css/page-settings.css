@@ -292,3 +292,22 @@ html[data-shape="pill"] .shape-option { border-radius: var(--radius); }
   .shape-options { gap: 7px; }
   .shape-option { padding-inline: 6px; }
 }
+
+
+/* Final silver-glass settings system. */
+.settings-page { padding-top: clamp(30px,6vh,64px); padding-bottom: 110px; }
+.ol-page-title { color: #f3f5f8; letter-spacing: -.065em; }
+.ol-page-sub { color: #9fa8b7; }
+.settings-nav { border-color: rgba(228,235,245,.16); background: rgba(22,25,31,.78); }
+.settings-nav a { border-radius: 12px; }
+.settings-nav a:hover, .settings-nav a:focus-visible { background: rgba(240,244,250,.1); }
+.settings-section-title { color: #d3dae5; }
+.settings-section .ol-box {
+  border: 1px solid rgba(226,233,243,.14);
+  background: linear-gradient(145deg,rgba(45,50,60,.72),rgba(16,18,24,.82));
+  box-shadow: 0 22px 60px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.06);
+}
+.settings-section .ol-box-eyebrow { color: #c6ceda; }
+.settings-section .ol-btn { color: #e8ecf2; background: rgba(255,255,255,.06); }
+.settings-section .ol-btn:hover { background: rgba(255,255,255,.13); }
+.settings-section .shape-option.on { background: linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.05)); border-color: rgba(237,242,249,.35); }
