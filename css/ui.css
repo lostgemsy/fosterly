@@ -1027,3 +1027,35 @@ body.rail-open .ol-sidebar .ol-label {
 :where(button,a,input,select,textarea,[tabindex]):focus-visible {
   outline:2px solid rgba(235,241,250,.72);outline-offset:3px;
 }
+
+
+/* Keep the full navigation visible regardless of the old collapse state. */
+body:not(.rail-open) .ol-sidebar,
+body.rail-open .ol-sidebar {
+  position:fixed!important;left:50%!important;right:auto!important;top:14px!important;bottom:auto!important;
+  transform:translateX(-50%)!important;display:flex!important;flex-direction:row!important;
+  align-items:center!important;justify-content:flex-start!important;width:max-content!important;
+  max-width:calc(100vw - 20px)!important;height:auto!important;max-height:calc(100vh - 24px)!important;
+  overflow-x:auto!important;overflow-y:hidden!important;
+}
+body:not(.rail-open) .ol-sidebar .ol-group,
+body.rail-open .ol-sidebar .ol-group,
+body:not(.rail-open) .ol-sidebar .ol-rail,
+body.rail-open .ol-sidebar .ol-rail { display:flex!important;flex-direction:row!important;width:auto!important;min-width:0!important; }
+body:not(.rail-open) .ol-sidebar .ol-link,
+body:not(.rail-open) .ol-sidebar .ol-panic,
+body.rail-open .ol-sidebar .ol-link,
+body.rail-open .ol-sidebar .ol-panic {
+  display:inline-flex!important;flex:0 0 auto!important;width:auto!important;min-width:max-content!important;
+  height:40px!important;min-height:40px!important;padding:0 13px!important;gap:8px!important;
+  opacity:1!important;visibility:visible!important;
+}
+body:not(.rail-open) .ol-sidebar .ol-label,
+body.rail-open .ol-sidebar .ol-label { display:inline!important;opacity:1!important;visibility:visible!important;max-width:180px!important;width:auto!important; }
+body:not(.rail-open) .ol-sidebar .ol-toggle,
+body.rail-open .ol-sidebar .ol-toggle { display:none!important; }
+@media(max-width:700px) {
+ body:not(.rail-open) .ol-sidebar,body.rail-open .ol-sidebar { max-width:calc(100vw - 12px)!important; }
+ body:not(.rail-open) .ol-sidebar .ol-link,body:not(.rail-open) .ol-sidebar .ol-panic,
+ body.rail-open .ol-sidebar .ol-link,body.rail-open .ol-sidebar .ol-panic { height:36px!important;min-height:36px!important;padding:0 10px!important;gap:6px!important; }
+}
