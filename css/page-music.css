@@ -772,3 +772,100 @@ body.overlay .lib-side { display: none; }
   .lyrics-panel, .lyrics-panel.closing { animation: none !important; }
   .lyrics-panel.animate-size { transition: none; }
 }
+
+
+/* HOHO silver-glass music redesign */
+.ol-stage.music {
+  gap:20px!important;
+  padding:26px clamp(16px,3vw,38px) 150px!important;
+}
+.music-head { margin-bottom:24px; }
+.music-search {
+  max-width:560px;min-height:50px;border-radius:17px!important;
+  border-color:rgba(232,238,248,.17)!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.095),rgba(255,255,255,.025))!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.1),0 12px 34px rgba(0,0,0,.14);
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease!important;
+}
+.music-search:focus-within { border-color:rgba(239,244,252,.42)!important;box-shadow:0 0 0 4px rgba(235,241,250,.06),0 14px 38px rgba(0,0,0,.2)!important; }
+.track-card {
+  padding:11px!important;border-radius:19px!important;
+  border-color:rgba(230,237,248,.12)!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.022))!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.075),0 8px 24px rgba(0,0,0,.12);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transition:transform .24s cubic-bezier(.2,.8,.2,1),background .22s ease,border-color .22s ease,box-shadow .22s ease!important;
+}
+.track-card:hover {
+  transform:translateY(-5px)!important;
+  border-color:rgba(235,241,250,.29)!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.045))!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.16),0 18px 38px rgba(0,0,0,.24)!important;
+}
+.track-card:active { transform:translateY(-1px) scale(.99)!important; }
+.track-art,.cat-art,.album-hero img,.player-thumb,.lib-art { border-radius:13px!important; }
+.track-art { background:rgba(255,255,255,.055); }
+.track-art .play-dot { backdrop-filter:blur(4px); }
+.track-card.playing { border-color:rgba(245,248,255,.55)!important;box-shadow:0 0 0 1px rgba(245,248,255,.12),0 12px 30px rgba(0,0,0,.22)!important; }
+.music-section-title { letter-spacing:-.025em; }
+.shelf-head .music-section-title { font-size:clamp(19px,2vw,24px); }
+.lib-side {
+  border-radius:21px!important;border-color:rgba(230,237,248,.15)!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025))!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.09),0 16px 38px rgba(0,0,0,.15);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+}
+.lib-card { border:1px solid rgba(232,238,248,.11);border-radius:16px!important;background:rgba(255,255,255,.045)!important; }
+.lib-row,.lib-nav-item { border-radius:12px!important; }
+.lib-row:hover,.lib-nav-item:hover { transform:translateX(2px);background:rgba(255,255,255,.075)!important; }
+.lib-create,.chip,.cat-back,.shelf-arrow,.lib-pill {
+  border-radius:13px!important;border:1px solid rgba(230,237,248,.17)!important;
+  background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.035))!important;
+  color:#edf1f8!important;box-shadow:inset 0 1px rgba(255,255,255,.12);
+}
+.lib-pill,.chip.active { background:linear-gradient(145deg,#fff,#cbd2de)!important;color:#171a20!important;border-color:rgba(255,255,255,.6)!important; }
+.lib-create:hover,.chip:hover,.cat-back:hover,.shelf-arrow:hover { transform:translateY(-2px);box-shadow:0 9px 20px rgba(0,0,0,.2),inset 0 1px rgba(255,255,255,.18)!important; }
+.player {
+  left:14px!important;right:14px!important;bottom:14px!important;
+  grid-template-columns:minmax(140px,1fr) minmax(220px,1.6fr) minmax(110px,1fr);
+  border:1px solid rgba(235,241,250,.2)!important;border-radius:22px!important;
+  background:linear-gradient(145deg,rgba(34,38,46,.91),rgba(9,11,15,.91))!important;
+  box-shadow:0 20px 54px rgba(0,0,0,.4),inset 0 1px rgba(255,255,255,.12)!important;
+  backdrop-filter:blur(24px) saturate(1.15)!important;-webkit-backdrop-filter:blur(24px) saturate(1.15)!important;
+}
+body.rail-open .player { left:14px!important; }
+.player-thumb { border:1px solid rgba(255,255,255,.12); }
+.player-btn { border:1px solid transparent!important; }
+.player-btn:hover { background:rgba(255,255,255,.11)!important;border-color:rgba(255,255,255,.12)!important;transform:translateY(-1px); }
+.player-play,.player-play:hover { border:1px solid rgba(255,255,255,.7)!important;background:linear-gradient(145deg,#fff,#cbd2de)!important;color:#14171c!important;box-shadow:0 5px 16px rgba(255,255,255,.1); }
+.player-range { background:rgba(255,255,255,.2); }
+.player-range::-webkit-slider-thumb { box-shadow:0 0 0 4px rgba(255,255,255,.08); }
+.lyrics-panel,.modal-overlay .modal {
+  border:1px solid rgba(235,241,250,.2)!important;border-radius:22px!important;
+  background:linear-gradient(145deg,rgba(30,34,42,.96),rgba(8,10,14,.96))!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.45),inset 0 1px rgba(255,255,255,.1)!important;
+}
+.lyrics-head { border-bottom-color:rgba(235,241,250,.12); }
+.track-fav { border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px); }
+@media(max-width:900px) {
+  .ol-stage.music { padding:20px 14px 220px!important; }
+  .lib-side { border-radius:18px!important; }
+  .player { left:10px!important;right:10px!important;bottom:10px!important;border-radius:18px!important; }
+}
+@media(max-width:560px) {
+  .track-grid { grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px; }
+  .shelf-track { grid-auto-columns:minmax(0,42vw);grid-auto-columns:42vw;gap:10px; }
+  .track-card { padding:8px!important;border-radius:16px!important; }
+  .player { grid-template-columns:minmax(0,1fr);gap:7px;padding:9px 12px!important; }
+  .player-track { gap:9px; }
+  .player-thumb { width:42px;height:42px; }
+  .player-center { min-width:0; }
+  .player-controls { gap:5px; }
+  .player-seek { gap:6px; }
+  .player-time { min-width:30px;font-size:10px; }
+  .music-search { min-width:0;width:100%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .track-card,.music-search,.lib-row,.lib-nav-item,.lib-create,.chip,.cat-back,.shelf-arrow,.player-btn { transition:none!important; }
+  .track-card:hover,.lib-row:hover,.lib-nav-item:hover { transform:none!important; }
+}
