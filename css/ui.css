@@ -1014,3 +1014,16 @@ body.rail-open .ol-sidebar .ol-label {
   }
   .ol-sidebar .ol-label { font-size:11px !important; }
 }
+
+
+/* Shared silver-glass interaction system */
+:where(.ol-btn,.ol-input,.music-search,.track-card,.cat-open,.lib-side,.lib-create,.lib-nav-item,.chip,.cat-back,.shelf-arrow,.player,.lyrics-panel,.modal,.ol-panel) { border-radius:16px; }
+:where(.ol-btn,.lib-create,.lib-pill,.lib-nav-item,.chip,.cat-back,.shelf-arrow,.player-btn,.track-card,.cat-open,.fav-pick-row,.ol-sidebar .ol-link,.ol-sidebar .ol-panic) {
+  transition:transform .22s cubic-bezier(.2,.8,.2,1),background .22s ease,border-color .22s ease,color .22s ease,box-shadow .22s ease !important;
+}
+:where(.ol-btn,.lib-create,.lib-pill,.lib-nav-item,.chip,.cat-back,.shelf-arrow,.player-btn,.track-card,.cat-open,.fav-pick-row,.ol-sidebar .ol-link,.ol-sidebar .ol-panic):hover {
+  border-color:rgba(235,241,250,.32);
+}
+:where(button,a,input,select,textarea,[tabindex]):focus-visible {
+  outline:2px solid rgba(235,241,250,.72);outline-offset:3px;
+}
