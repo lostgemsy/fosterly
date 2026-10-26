@@ -1059,3 +1059,7 @@ body.rail-open .ol-sidebar .ol-toggle { display:none!important; }
  body:not(.rail-open) .ol-sidebar .ol-link,body:not(.rail-open) .ol-sidebar .ol-panic,
  body.rail-open .ol-sidebar .ol-link,body.rail-open .ol-sidebar .ol-panic { height:36px!important;min-height:36px!important;padding:0 10px!important;gap:6px!important; }
 }
+
+body.hoho-nav-left .ol-sidebar,body.hoho-nav-right .ol-sidebar{overflow-x:hidden!important;overflow-y:auto!important;align-items:stretch!important}
+body.hoho-nav-left .ol-sidebar .ol-link,body.hoho-nav-left .ol-sidebar .ol-panic,body.hoho-nav-right .ol-sidebar .ol-link,body.hoho-nav-right .ol-sidebar .ol-panic{justify-content:flex-start!important}
+body.hoho-nav-left .ol-sidebar .ol-label,body.hoho-nav-right .ol-sidebar .ol-label{white-space:nowrap!important}
